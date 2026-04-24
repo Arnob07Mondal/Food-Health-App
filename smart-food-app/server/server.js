@@ -22,13 +22,13 @@ app.use(errorHandler);
 
 // Only connect to database if not in test environment
 if (process.env.NODE_ENV !== 'test') {
-  mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/smart-food-app')
+  mongoose.connect(process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb://localhost:27017/smart-food-app')
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 
-  const PORT = process.env.PORT || 5000;
+  const PORT = process.env.PORT || 8080;
   app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on ${PORT}`);
   });
 }
 

@@ -1,9 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 body {
-  @apply min-h-screen text-white m-0 font-sans bg-cover bg-center bg-fixed bg-no-repeat;
+  min-height: 100vh;
+  color: #ffffff;
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-image: linear-gradient(to bottom right, rgba(59, 130, 246, 0.8), rgba(168, 85, 247, 0.8), rgba(236, 72, 153, 0.8)), url('/bg-image.png');
   background-blend-mode: overlay;
 }
